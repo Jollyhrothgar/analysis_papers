@@ -1,0 +1,43 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                               %
+% Chapter: VariablesAndCalculations Thu Sep  3 22:23:57 EDT 2015
+%                                                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Variables and Calculations}
+\label{ch:VariablesAndCalculations}
+Though the process of extracting the variables presented in this chapter can sometimes
+require several steps (or even its own chapter) we present the variables in this chapter
+from a physical standpoint. 
+
+These variables characterize the dynamics of the beams intersecting in the PHENIX
+interaction region (IR). Our goal in the vernier analysis is to calculate the effective
+detector cross section for our Beam Beam Counter (BBC) photomultiplier tube detector, as
+well as the RHIC machine luminosity, $\mathcal{L}_{RHIC}$. We must also use a realistic
+model for highly relativistic collisions between two intersecting beams.
+
+The basic equations, models and variables used in the analysis are summarized here; no
+derivations will be provided (but they will be referenced for the interested reader). I
+will go into detail discussing the extraciton of each parameter within relevent chapters.
+
+The effective detector cross section~\cite{drees2013} can be expressed as:
+
+\begin{equation}
+\label{eq:detector_xsec}
+\sigma_{ZDC}^{eff} = {{R_{max} 2\pi n_{B} n_{Y} \sigma_{x} \sigma_{y}}\over{n_{bunch}
+f_{bunch} N_{B} N_{Y} }}
+\end{equation}
+
+with various parameters are defined in Table~\ref{tab:ana_vars}.
+
+We use the standard relativistic intersecting beam model for colliding
+bunches~\cite{an888}, which is defined to be:
+
+\begin{equation}
+\label{eq:reletivistic_beam_final} 
+\mathcal{L} = {{n_{bunch} f_{bunch} N_{B} N_{Y} }\over{ 2 \pi^{2} \sigma_{x}
+\sigma_{y}\sigma{z}^2}} \int \int
+e^{-\left({{z^{2}}\over{\sigma_{z}^{2}}}+{{c^{2}t^{2}}\over{\sigma_{z}^{2}}}\right)} c dt
+\end{equation}
+
+\input{../VariablesAndCalculations/tables/ana_vars.tex}

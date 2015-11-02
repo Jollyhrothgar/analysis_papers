@@ -1,0 +1,53 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                               %
+% Chapter: SystematicCorrections Wed Sep  9 22:48:07 EDT 2015
+%                                                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Systematic Corrections}
+\label{ch:SystematicCorrections}
+
+This chapter serves as an introduction to the various corrections which are
+applied along the analysis chain. In the case where corrections are small, and
+don't warrant an entire chapter, I will discuss in detail here, but for other
+correcitons, I will simply introduce here, and devote a whole chapter to them.
+
+\section{Crossing Angle and $\beta^{*}$: The Hourglass Effect}
+
+In the model for beam lumonisty discussed in Equation ~\ref{eq:lumi_one_bunch},
+section ~\ref{ch:intro}(BROKEN REFERENCE), we neglected to  mention the importance of the
+z-dependant ion distributions in each bunch. In fact, beam bunches have a very
+real z-dependant componant of their ion distributions. If we could view the
+transverse beam width at various points along the bunch in the z-dimension, we
+would find that the transverse beam width varied as a function of z. However,
+because we must trigger our data, our mininmum bias trigger imposes vertex range
+over which we can observe events.  When we measure horizontal and vertical beam
+widths using the vernier scan technique, we are effectively measuring weighted
+average horizontal and vertical beam widths over a z-vertex range of 0 to 30
+centimeters ~\cite{an888}. Suffice to say, we have an incomplete model for our
+beam gemoetry, and must account for the z-dependance of our bunch density
+distributions, and we do so using the measured horizontal and vertical beam
+widths as a constraint. 
+
+Chapter~\ref{ch:HourglassCorrection} discusses this correction in detail.
+
+\section{Luminosity Losses}
+
+Anyone who has been on shift is familiar with the overhead displays of the beam
+intensity. We all know that as any fill progresses, there is luminosity loss,
+which will affect the BBC Rate. Losses in the BBC Rate will skew any
+distributions that depend on this parameter, and in this analysis, the beam
+width is such a distribution. Vernier scans are taken towards the end of a fill,
+since luminosity losses are more extreme at the beginning of the fill. In
+general, these losses account for about 1 or 2 percent, though they are
+calculated explicitly in this analysis over the duration of each scan. 
+
+{\textbf{NOTE: show how we derive a linear relationship between beam losses and the
+product of the WCMBlueTotal and WCMYellowTotal, fit this with a line, and then
+use the fit to correct the BBC rate data}
+
+\section{Beam Position Monitoring vs Planned Scan Steps}
+
+\section{Time Synchronization}
+

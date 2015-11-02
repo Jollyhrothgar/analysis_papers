@@ -1,0 +1,25 @@
+\begin{table}
+\centering
+\begin{tabular}{c p{8cm} c c }
+\toprule
+\textbf{Variable} & \textbf{Description} & \textbf{Units} & \textbf{Dimension} \\
+\midrule 
+$\sigma_{x}$, $\sigma_{y}$ & bunch profile width obtained from vernier scan beam overlap in x and y directions. & $\mu m$ & $length$ \\
+$\sigma_{z}$ & bunch profile width in z-direction, i.e. z-beam width. & $\mu m$ & $length$ \\
+$\dot{N}$ & Live event rate for "BBCLL1(\textgreater0 tubes)" trigger & $Hz$ & $time^{-1}$ \\
+$R_{max}$ & Maximum BBC Rate determined from maximum overlap of beams rate for "BBCLL1(\textgreater0 tubes)" trigger & $Hz$ & $time^{-1}$ \\
+$\mathcal{L}_{RHIC}$ & Absolute luminosity delivered to PHENIX IR from RHIC & $cm^{-2}s^{-1}$ & $area^{-1}time^{1}$ \\
+$\sigma_{p+p} $ & Inelastic scattering cross section of proton-proton collisions & $cm^{2}$ & $area^{-1}$ \\
+$N_{b}^{i},N_{y}^{i}$ & Number of ions in bunch $i$ for the blue ($b$) beam or yellow ($y$) beam. & count & \\
+$f_{bunch}$ & Frequency of a specific bunch crossing & $Hz$ & $seconds^{-1}$ \\
+$k_{b}$ & Number of bunches filled in one of the beams (assume identical beams) & count & \\
+$\sigma_{BBC}$ & Cross section of p+p collisions observed by BBC, uncorrected for efficiency & $cm^{-2}$ & $area_{-1}$ \\
+$\epsilon_{BBC}$ & BBC efficiency & unitless $[0,1]$ & \\
+$n_{bunch}$ & Number of filled bunches in the blue or yellow beam & unitless $[0,120]$ & \\
+\bottomrule
+\end{tabular}
+\caption{These are the variables we use in the vernier analysis. Some variables are
+extracted directly from the data streams (such as the bbc-rate), while others are
+calculated from distributions of variables (such as the beam-width, $\sigma_{x,y}$). }
+\label{tab:ana_vars}
+\end{table}

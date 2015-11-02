@@ -1,0 +1,3 @@
+# add below \backmatter
+\bibliographystyle{amsplain}
+\bibliography{../main/bib}
