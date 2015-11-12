@@ -70,4 +70,25 @@ The toy Monte Carlo is seeded with initial values which are extracted from the
 data, and then the parameters are adjusted until suitably matching the data
 distribution.
 
+Within the toy Monte-Carlo, we calculate the full form of the Luminosity, by
+making a few simplifying assumptions.
+
+\begin{itemize}
+  \item All bunches are identical
+  \item Beam widths obtained from the vernier scan are good approximations
+  \item Which bunches are filled/unfilled do not matter, so long as we have the
+	correct number of filled bunches.
+  \item There is no crossing angle in the z-y plane, only the z-x plane (this
+	  can be verified as a good assumption by observing figure (FIGURE
+	  REFERENCE NEEDED)
+\end{itemize}
+
+Once we simulate the luminosity, we compare this to the overall luminosity
+obtained directly from the data (but without correction for the hourglass effect
+or crossing angle). We obtain the ratio of the two luminosities, thus yielding
+our multiplicative correction factor.
+
+Within the simulation, we calculate the luminosity via a riemann sum, binning
+space and time finely enough to converge to a reasonable value.
+
 
