@@ -1,0 +1,43 @@
+\providecommand{\bysame}{\leavevmode\hbox to3em{\hrulefill}\thinspace}
+\providecommand{\MR}{\relax\ifhmode\unskip\space\fi MR }
+% \MRhref is called by the amsart/book/proc definition of \MR.
+\providecommand{\MRhref}[2]{%
+  \href{http://www.ams.org/mathscinet-getitem?mr=#1}{#2}
+}
+\providecommand{\href}[2]{#2}
+\begin{thebibliography}{1}
+
+\bibitem{an688}
+Bazilevsky A., Bennett R., Deshpande A., and Goto Y., \emph{Absolute luminosity
+  determination using the vernier scan technique: Run5-6 analysis and
+  preliminary results at $\sqrt{s} = 62.4 gev$}, PHENIX Analysis Note AN688
+  (2008).
+
+\bibitem{an597}
+Bazilevsky A., Bennett R., Deshpande A., Goto Y., Kawall D., and Seele J.,
+  \emph{Absolute luminosity determination using the vernier scan technique:
+  Run4-6 analysis and preliminary results at $\sqrt{s} = 62.4 gev$}, PHENIX
+  Analysis Note AN597 (2007).
+
+\bibitem{an888}
+A.~Datta and D.~Kawall, \emph{$\sigma_{BBC}$ using vernier scans for 500 $gev$
+  pp data in run09}, PHENIX Analysis Note AN888 (2010).
+
+\bibitem{drees2013}
+A.~Drees, \emph{Analysis of vernier scans during rhic run-13 (pp at $255
+  gev/beam$)}, Collider Accelerator Department (RHIC) AP??? (2013).
+
+\bibitem{herr2006lumi}
+Werner Herr and Bruno Muratori, \emph{Concept of luminosity},  (2006).
+
+\bibitem{kawallfocus2005}
+D.~Kawall, \emph{How to measure absolute luminosity}, PHENIX Focus Seminar
+  (2005).
+
+\bibitem{an184}
+Belikov S., Bunce G., Chiu M., Fox B., Goto Y., Kawabata T., Saito N., and
+  Tannenbaum M., \emph{Determination of the absolute luminosity for the
+  proton-proton data at $\sqrt{s} = 200 gev$ recoreded by phenix during rhic
+  run-02}, PHENIX Analysis Note AN184 (2002).
+
+\end{thebibliography}
