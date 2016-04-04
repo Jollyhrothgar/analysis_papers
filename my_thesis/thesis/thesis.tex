@@ -27,10 +27,13 @@
 % \documentclass[11pt]{ucthesis}
 % \documentclass[11pt]{ucr}
 \documentclass[oneside,final, letterpaper]{ucr}
+\input{packages}
+
 \begin{document}
 
-% Declarations for Front Matter
+% Add additional packages, custom commands 
 
+% Declarations for Front Matter
 \title{MEASUREMENT OF THE LONGTIDUDIANL SINGLE SPIN ASYMMETRY, $A_L$, FOR POLARIZED PROTON-PROTON COLLISIONS IN THE $W\rightarrow\mu$ DECAY CHANNEL}
 \author{Michael J. Beaumier}
 \degreemonth{August}
@@ -51,10 +54,12 @@ Professor John Ellison}
 
 \begin{frontmatter}
 
+% Acknowlegements Page
 \begin{acknowledgements}
 	\input{../Acknowlegements/acknowlegements.tex}
 \end{acknowledgements}
 
+% Dedication Page
 \begin{dedication}
 \null\vfil
 {\large
@@ -67,6 +72,7 @@ Professor John Ellison}
 \vfil\null
 \end{dedication}
 
+% Abstract Page
 \input{../Abstract/abstract.tex}
 
 \tableofcontents
@@ -74,9 +80,7 @@ Professor John Ellison}
 \listoftables
 \end{frontmatter}
 
-% \part{First Part}
-
-
+% Thesis Body
 \input{../Chapter1/01_introduction} %usually intro
 \input{../Chapter2/02_physicsbackground}
 \input{../Chapter3/03_experimentalapparatus}
@@ -84,10 +88,7 @@ Professor John Ellison}
 \input{../Chapter5/05_vernieranalysis}
 \input{../Chapter6/06_discussionconclusion}
 
-
 \nocite{*}
-% \singlespacing
-% \bibliographystyle{alpha}
 \bibliographystyle{plain}
 \bibliography{bibliography}
 \input{../Appendix/appendix}

@@ -1,9 +1,9 @@
 all:
 	touch build_log
-	pdflatex thesis.tex >> build_log
-	bibtex thesis.aux >> build_log
-	pdflatex thesis.tex >> build_log
-	pdflatex thesis.tex >> build_log
+	pdflatex thesis.tex | tee -a build_log
+	bibtex thesis.aux | tee -a build_log
+	pdflatex thesis.tex | tee -a build_log
+	pdflatex thesis.tex | tee -a build_log
 clean:
 	rm -rfv thesis.pdf
 	rm -rfv thesis.toc

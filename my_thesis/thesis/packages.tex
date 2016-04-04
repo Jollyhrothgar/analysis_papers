@@ -1,0 +1,60 @@
+%% Packages %%
+\usepackage{tabulary}
+\usepackage{booktabs,multirow,dcolumn,bigdelim}
+\usepackage{float,graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[figuresright]{rotating}
+
+%% Custom Commands %%
+
+% Create an obvious citation placeholder
+\newcommand{\needcite}[0]{\textbf{\textcolor{red}{ [CITATION NEEDED]}}}
+
+% Generate a sideways table placeholder
+\newcommand{\sidewaystab}[0]
+{
+\input{../filler/sidewaystab.tex}
+}
+
+% Generate a regular table placeholder
+\newcommand{\regtab}[0]
+{
+\input{../filler/regtab.tex}
+}
+
+% Generate a squared figure placeholder
+\newcommand{\sqfig}
+{
+\begin{figure}
+\begin{center}
+\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{../filler/squareimg.png}
+\caption{ \textcolor{red}{Default Caption} }
+\label{fig:sqfig}
+\end{center}
+\end{figure}
+
+}
+% Generate a portrait figure placeholder
+\newcommand{\pofig}
+{
+\begin{figure}
+\begin{center}
+\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{../filler/portraitimg.png}
+\caption{ \textcolor{red}{Default Caption} }
+\label{fig:sqfig}
+\end{center}
+\end{figure}
+}
+
+% Generate a landscape figure placeholder
+\newcommand{\lafig}
+{
+\begin{figure}
+\begin{center}
+\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{../filler/landscapeimg.png}
+\caption{ \textcolor{red}{Default Caption} }
+\label{fig:sqfig}
+\end{center}
+\end{figure}
+}
