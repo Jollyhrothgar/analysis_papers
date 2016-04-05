@@ -17,4 +17,5 @@ clean:
 	rm -rfv thesis.fdb_latexmk
 	rm -rfv thesis.bbl
 	rm -rfv thesis.blg
+	rm -rfv thesis.out
 	rm -rfv build_log
