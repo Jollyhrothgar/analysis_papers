@@ -7,14 +7,14 @@ of producing muons, many of which are dominant in the $W$ boson kinematic
 regime (Figure~\ref{fig:muon_production_vs_pt}).
 
 \begin{figure}[H]
-\begin{center}
-\includegraphics[width=0.75\linewidth]{../Chapter5/fig/muon_production_vs_pt.jpg}
-\caption{ Observing the production of muon as a function of $p_T$, we can see
-that in the kinematic region of $W$ production that the dominant sources of
-muons come from other processes. The new PHENIX muon trigger threshold is
-sensitive at 10 $GeV/c$ and above. }
-\label{fig:muon_production_vs_pt}
-\end{center}
+	\begin{center}
+		\includegraphics[width=0.5\linewidth]{../Chapter5/fig/muon_production_vs_pt.jpg}
+		\caption{ Observing the simulated production of muon as a function of $p_T$, we
+			can see that in the kinematic region of $W$ production that the dominant sources
+			of muons come from other processes. The new PHENIX muon trigger threshold is
+			sensitive at 10 $GeV/c$ and above. }
+		\label{fig:muon_production_vs_pt}
+	\end{center}
 \end{figure}
 
 We can divide up the total observed muon spectrum into contributions from three
@@ -71,16 +71,25 @@ chosen from the multitude of possible physical event parameters, because they
 were all maximally uncorrelated. Concretely, these correlations are presented in
 
 \begin{figure}[H]
-	\begin{center}
-		{
-			\includegraphics[width=0.65\linewidth]{../Chapter5/fig/CorrelationMatrix_Signal.png}
-			\includegraphics[width=0.65\linewidth]{../Chapter5/fig/CorrelationMatrix_Background.png}
-		}	
-		\caption{ Low correlations between the signal variable distributions (from
-		simulation), and the background variable distributions make this data set
-		a good candidate for classfication using Naive Bayes}
-		\label{fig:kinematic_var_correlations}
-	\end{center}
+	\centering
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[width=0.95\linewidth]{../Chapter5/fig/CorrelationMatrix_Signal.png}
+		\caption{Correlations between kinematic variables, produced from simulated
+			data.}
+		\label{fig:corr_mat_sig}
+	\end{subfigure}%
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[width=0.95\linewidth]{../Chapter5/fig/CorrelationMatrix_Background.png}
+		\caption{Correlations betwen kinematic variables, produced from the data,
+			which is composed mostly of hadronic background}
+		\label{fig:corr_mat_bkg}
+	\end{subfigure}
+	\caption{ Low correlations between the signal variable distributions (from
+		simulation), and the background variable distributions make this data set a
+		good candidate for classfication using Naive Bayes}
+	\label{fig:kinematic_var_correlations}
 \end{figure}
 
 Briefly, a Naive Bayes classifier may be constructed from the core of the
