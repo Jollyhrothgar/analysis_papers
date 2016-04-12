@@ -27,10 +27,12 @@
 
 @misc{nobelthomson2014,
 booktitle = {Nobel Media AB},
+keywords = {Electron Scattering,History,JJ Thomson},
+mendeley-groups = {Thesis References},
 mendeley-tags = {Electron Scattering,History},
 title = {{J.J Thomson - Biographical}},
-%%%%url = {http://www.nobelprize.org/nobel{\_}prizes/physics/laureates/1906/thomson-bio.html},
-%%%%urldate = {11 April 2016},
+url = {http://www.nobelprize.org/nobel{\_}prizes/physics/laureates/1906/thomson-bio.html},
+urldate = {11 April 2016},
 year = {2014}
 }
 
@@ -43,6 +45,7 @@ year = {2014}
   volume         = "77",
   year           = "2005",
   pages          = "1257-1302",
+  doi            = "10.1103/RevModPhys.77.1257",
   eprint         = "hep-ph/0411005",
   archivePrefix  = "arXiv",
   primaryClass   = "hep-ph",
@@ -61,6 +64,8 @@ year = {2014}
   year = {1969},
   month = {Oct},
   publisher = {American Physical Society},
+  doi = {10.1103/PhysRevLett.23.930},
+  url = {http://link.aps.org/doi/10.1103/PhysRevLett.23.930}
 }
 
 @article{1603.05884,
@@ -101,6 +106,7 @@ year = {2014}
     month = may,
    volume = 206,
     pages = {364-370},
+      doi = {10.1016/0370-2693(88)91523-7},
    adsurl = {http://adsabs.harvard.edu/abs/1988PhLB..206..364A},
   adsnote = {Provided by the SAO/NASA Astrophysics Data System}
 }
