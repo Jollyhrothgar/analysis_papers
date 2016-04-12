@@ -10,6 +10,8 @@ def clean(fileName):
             with open(fileName+'.tmp','w') as cleanf:
                  lines = bibf.readlines()
                  for line in lines:
+                     if re.search('author',line):
+                         print line
                      if re.search('^'+'|'.join(blind_keys),line):
                          cleanf.write('%%%%' + line)
                      elif not re.search('^'+'|'.join(remove_keys),line):
