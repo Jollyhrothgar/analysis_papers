@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.11.25)  10 DEC 2015 13:07
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.5.3)  9 MAY 2016 13:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -327,9 +327,11 @@ Package caption3 Info: TeX engine: e-TeX on input line 57.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: rotating package is loaded.
-) (./moresize.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/moresize/moresize.sty
 Package: moresize 1999/07/26 v1.9 (more font sizes)
-) (/usr/share/texlive/texmf-dist/tex/latex/psnfss/helvet.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/helvet.sty
 Package: helvet 2005/04/12 PSNFSS-v9.2a (WaS) 
 )
 (/usr/share/texlive/texmf-dist/tex/latex/sectsty/sectsty.sty
@@ -664,14 +666,18 @@ File: omsppl.fd
 )
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 63.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 65.
+
+
+LaTeX Warning: Citation `an688Bennet2008' on page iv undefined on input line 65
+.
 
 (../intro/tables/global_scan_summary.tex
-LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 5.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10.95> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 17.
 ) (../intro/figs/scan_patterns.tex
-<../intro/figs/scan_patterns.png, id=117, 669.2503pt x 408.02437pt>
+<../intro/figs/scan_patterns.png, id=116, 669.2503pt x 408.02437pt>
 File: ../intro/figs/scan_patterns.png Graphic file (type png)
 
 <use ../intro/figs/scan_patterns.png>
@@ -709,6 +715,9 @@ l.22 ...ine {6}Multiple Collisions}{43}{chapter.6}
 Chapter 1.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <24.88> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 7.
+
+LaTeX Warning: Citation `an888' on page 1 undefined on input line 34.
+
 (../VariablesAndCalculations/tables/ana_vars.tex
 LaTeX Font Info:    Try loading font information for OML+ppl on input line 9.
 
@@ -748,16 +757,22 @@ Chapter 2.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <17.28> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 117.
  [5] (../DataStreams/figs/bpm_schematic_cartoon.tex
-<../DataStreams/figs/bpm_schematic.png, id=196, 940.26282pt x 487.8225pt>
+<../DataStreams/figs/bpm_schematic.png, id=193, 940.26282pt x 487.8225pt>
 File: ../DataStreams/figs/bpm_schematic.png Graphic file (type png)
 
 <use ../DataStreams/figs/bpm_schematic.png>
 Package pdftex.def Info: ../DataStreams/figs/bpm_schematic.png used on input li
 ne 3.
 (pdftex.def)             Requested size: 469.75499pt x 243.71712pt.
-)
-(../DataStreams/figs/bpm_ir_xing_cartoon.tex
-<../DataStreams/figs/bpm_ir_beam_separation.png, id=199, 1128.46594pt x 568.373
+
+
+LaTeX Warning: Citation `kawallfocus2005' on page 6 undefined on input line 8.
+
+
+LaTeX Warning: Citation `kawallfocus2005' on page 6 undefined on input line 8.
+
+) (../DataStreams/figs/bpm_ir_xing_cartoon.tex
+<../DataStreams/figs/bpm_ir_beam_separation.png, id=194, 1128.46594pt x 568.373
 44pt>
 File: ../DataStreams/figs/bpm_ir_beam_separation.png Graphic file (type png)
  <use ../DataStreams/figs/bpm_ir_beam_separation.png>
@@ -789,25 +804,42 @@ rmer
  []
 
 [11] (../DataStreams/figs/wcm_schematic_cartoon.tex
-<../DataStreams/figs/wcm_schematic_cartoon.png, id=234, 419.31656pt x 306.39468
+<../DataStreams/figs/wcm_schematic_cartoon.png, id=228, 419.31656pt x 306.39468
 pt>
 File: ../DataStreams/figs/wcm_schematic_cartoon.png Graphic file (type png)
  <use ../DataStreams/figs/wcm_schematic_cartoon.png>
 Package pdftex.def Info: ../DataStreams/figs/wcm_schematic_cartoon.png used on 
 input line 3.
 (pdftex.def)             Requested size: 352.31624pt x 257.43523pt.
-)
-(../DataStreams/figs/dcct_schematic_cartoon.tex
-<../DataStreams/figs/dcct_schematic_cartoon.png, id=237, 428.35031pt x 418.5637
+
+
+LaTeX Warning: Citation `kawallfocus2005' on page 12 undefined on input line 6.
+
+
+
+LaTeX Warning: Citation `kawallfocus2005' on page 12 undefined on input line 6.
+
+
+) (../DataStreams/figs/dcct_schematic_cartoon.tex
+<../DataStreams/figs/dcct_schematic_cartoon.png, id=229, 428.35031pt x 418.5637
 5pt>
 File: ../DataStreams/figs/dcct_schematic_cartoon.png Graphic file (type png)
  <use ../DataStreams/figs/dcct_schematic_cartoon.png>
 Package pdftex.def Info: ../DataStreams/figs/dcct_schematic_cartoon.png used on
  input line 3.
 (pdftex.def)             Requested size: 352.31624pt x 344.26552pt.
+
+
+LaTeX Warning: Citation `kawallfocus2005' on page 12 undefined on input line 7.
+
+
+
+LaTeX Warning: Citation `kawallfocus2005' on page 12 undefined on input line 7.
+
+
 ) [12 <../DataStreams/figs/wcm_schematic_cartoon.png>] [13 <../DataStreams/figs
-/dcct_schematic_cartoon.png>]) [14] (../BeamPositionMonitoring/BeamPositionMoni
-toring.tex
+/dcct_schematic_cartoon.png>]) [14]
+(../BeamPositionMonitoring/BeamPositionMonitoring.tex
 Chapter 3.
 (../BeamPositionMonitoring/tables/plannedsteps359711.tex)
 (../BeamPositionMonitoring/tables/plannedsteps360879.tex)
@@ -848,6 +880,9 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 
 Package hyperref Warning: Suppressing empty link on input line 19.
 
+
+LaTeX Warning: Citation `an888' on page 23 undefined on input line 28.
+
 [23
 
 
@@ -859,6 +894,9 @@ Overfull \hbox (6.94746pt too wide) detected at line 41
  []
 
 
+LaTeX Warning: Citation `herr2006lumi' on page 25 undefined on input line 45.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [25
@@ -866,7 +904,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 ]
 (../HourglassCorrection/figs/simple_bunch_head_on.tex
-<../HourglassCorrection/figs/simple_bunch_head_on.png, id=321, 908.39375pt x 41
+<../HourglassCorrection/figs/simple_bunch_head_on.png, id=309, 908.39375pt x 41
 5.5525pt>
 File: ../HourglassCorrection/figs/simple_bunch_head_on.png Graphic file (type p
 ng)
@@ -875,6 +913,9 @@ Package pdftex.def Info: ../HourglassCorrection/figs/simple_bunch_head_on.png u
 sed on input line 3.
 (pdftex.def)             Requested size: 469.76161pt x 214.89647pt.
 )
+
+LaTeX Warning: Citation `an888' on page 26 undefined on input line 62.
+
 
 LaTeX Warning: Reference `eq:general_luminosity' on page 26 undefined on input 
 line 65.
@@ -887,7 +928,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [27]
 [28] (../HourglassCorrection/figs/xz_angle.tex
-<../HourglassCorrection/figs/xing_bunch.png, id=378, 1021.8175pt x 327.2225pt>
+<../HourglassCorrection/figs/xing_bunch.png, id=364, 1021.8175pt x 327.2225pt>
 File: ../HourglassCorrection/figs/xing_bunch.png Graphic file (type png)
 
 <use ../HourglassCorrection/figs/xing_bunch.png>
@@ -895,7 +936,7 @@ Package pdftex.def Info: ../HourglassCorrection/figs/xing_bunch.png used on inp
 ut line 3.
 (pdftex.def)             Requested size: 469.74551pt x 150.4293pt.
 
-<../HourglassCorrection/figs/bunch_rotation.png, id=379, 1161.33875pt x 871.255
+<../HourglassCorrection/figs/bunch_rotation.png, id=365, 1161.33875pt x 871.255
 pt>
 File: ../HourglassCorrection/figs/bunch_rotation.png Graphic file (type png)
  <use ../HourglassCorrection/figs/bunch_rotation.png>
@@ -904,7 +945,7 @@ Package pdftex.def Info: ../HourglassCorrection/figs/bunch_rotation.png used on
 (pdftex.def)             Requested size: 421.44855pt x 316.17747pt.
 )
 (../HourglassCorrection/figs/beta_function.tex
-<../HourglassCorrection/figs/beta_function.png, id=380, 973.6375pt x 693.59125p
+<../HourglassCorrection/figs/beta_function.png, id=366, 973.6375pt x 693.59125p
 t>
 File: ../HourglassCorrection/figs/beta_function.png Graphic file (type png)
  <use ../HourglassCorrection/figs/beta_function.png>
@@ -915,7 +956,7 @@ input line 3.
 /bunch_rotation.png>]
 [30 <../HourglassCorrection/figs/beta_function.png>]
 (../HourglassCorrection/figs/sample_configuration.tex
-<../HourglassCorrection/figs/sample_configuration.pdf, id=393, 569.12625pt x 41
+<../HourglassCorrection/figs/sample_configuration.pdf, id=379, 569.12625pt x 41
 0.53375pt>
 File: ../HourglassCorrection/figs/sample_configuration.pdf Graphic file (type p
 df)
@@ -928,7 +969,7 @@ sed on input line 3.
 
  <../HourglassCorrection/figs/sample_configuration.pdf, page is rotated 90 degr
 ees>] (../HourglassCorrection/figs/simulation_flow.tex
-<../HourglassCorrection/figs/simulation_flow.pdf, id=442, 845.04686pt x 597.507
+<../HourglassCorrection/figs/simulation_flow.pdf, id=428, 845.04686pt x 597.507
 86pt>
 File: ../HourglassCorrection/figs/simulation_flow.pdf Graphic file (type pdf)
  <use ../HourglassCorrection/figs/simulation_flow.pdf>
@@ -937,7 +978,7 @@ n input line 3.
 (pdftex.def)             Requested size: 469.75444pt x 332.14958pt.
 ) [32] [33 <../HourglassCorrection/figs/simulation_flow.pdf>]
 (../HourglassCorrection/figs/359711_wcm_zprofile.tex
-<../HourglassCorrection/figs/359711_wcm_zprofile.pdf, id=479, 569.12625pt x 367
+<../HourglassCorrection/figs/359711_wcm_zprofile.pdf, id=465, 569.12625pt x 367
 .3725pt>
 File: ../HourglassCorrection/figs/359711_wcm_zprofile.pdf Graphic file (type pd
 f)
@@ -947,7 +988,7 @@ ed on input line 3.
 (pdftex.def)             Requested size: 469.7781pt x 303.243pt.
 )
 (../HourglassCorrection/figs/360879_wcm_zprofile.tex
-<../HourglassCorrection/figs/360879_wcm_zprofile.pdf, id=480, 569.12625pt x 367
+<../HourglassCorrection/figs/360879_wcm_zprofile.pdf, id=466, 569.12625pt x 367
 .3725pt>
 File: ../HourglassCorrection/figs/360879_wcm_zprofile.pdf Graphic file (type pd
 f)
@@ -957,7 +998,7 @@ ed on input line 3.
 (pdftex.def)             Requested size: 469.7781pt x 303.243pt.
 )
 (../HourglassCorrection/figs/362492_wcm_zprofile.tex
-<../HourglassCorrection/figs/362492_wcm_zprofile.pdf, id=481, 569.12625pt x 367
+<../HourglassCorrection/figs/362492_wcm_zprofile.pdf, id=467, 569.12625pt x 367
 .3725pt>
 File: ../HourglassCorrection/figs/362492_wcm_zprofile.pdf Graphic file (type pd
 f)
@@ -967,7 +1008,7 @@ ed on input line 3.
 (pdftex.def)             Requested size: 469.7781pt x 303.243pt.
 )
 (../HourglassCorrection/figs/364636_wcm_zprofile.tex
-<../HourglassCorrection/figs/364636_wcm_zprofile.pdf, id=482, 569.12625pt x 367
+<../HourglassCorrection/figs/364636_wcm_zprofile.pdf, id=468, 569.12625pt x 367
 .3725pt>
 File: ../HourglassCorrection/figs/364636_wcm_zprofile.pdf Graphic file (type pd
 f)
@@ -977,7 +1018,7 @@ ed on input line 3.
 (pdftex.def)             Requested size: 469.7781pt x 303.243pt.
 )
 (../HourglassCorrection/figs/365866_wcm_zprofile.tex
-<../HourglassCorrection/figs/365866_wcm_zprofile.pdf, id=483, 569.12625pt x 366
+<../HourglassCorrection/figs/365866_wcm_zprofile.pdf, id=469, 569.12625pt x 366
 .36874pt>
 File: ../HourglassCorrection/figs/365866_wcm_zprofile.pdf Graphic file (type pd
 f)
@@ -987,7 +1028,7 @@ ed on input line 3.
 (pdftex.def)             Requested size: 469.7781pt x 302.41446pt.
 )
 (../HourglassCorrection/figs/366605_wcm_zprofile.tex
-<../HourglassCorrection/figs/366605_wcm_zprofile.pdf, id=484, 569.12625pt x 367
+<../HourglassCorrection/figs/366605_wcm_zprofile.pdf, id=470, 569.12625pt x 367
 .3725pt>
 File: ../HourglassCorrection/figs/366605_wcm_zprofile.pdf Graphic file (type pd
 f)
@@ -997,7 +1038,7 @@ ed on input line 3.
 (pdftex.def)             Requested size: 469.7781pt x 303.243pt.
 )
 (../HourglassCorrection/figs/367138_wcm_zprofile.tex
-<../HourglassCorrection/figs/367138_wcm_zprofile.pdf, id=485, 569.12625pt x 367
+<../HourglassCorrection/figs/367138_wcm_zprofile.pdf, id=471, 569.12625pt x 367
 .3725pt>
 File: ../HourglassCorrection/figs/367138_wcm_zprofile.pdf Graphic file (type pd
 f)
@@ -1019,7 +1060,7 @@ LaTeX Warning: Reference `359711_step14_config_compare' on page 41 undefined on
  input line 204.
 
 (../HourglassCorrection/figs/359711_step0_config_compare.tex
-<../HourglassCorrection/figs/359711_step0_config_compare.pdf, id=817, 569.12625
+<../HourglassCorrection/figs/359711_step0_config_compare.pdf, id=803, 569.12625
 pt x 275.0275pt>
 File: ../HourglassCorrection/figs/359711_step0_config_compare.pdf Graphic file 
 (type pdf)
@@ -1052,6 +1093,12 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 \tf@brf=\write5
 \openout5 = `main.brf'.
 
+Missing character: There is no â in font pplri7t!
+Missing character: There is no € in font pplri7t!
+Missing character: There is no “ in font pplri7t!
+Missing character: There is no â in font pplri7t!
+Missing character: There is no ˆ in font pplri7t!
+Missing character: There is no š in font pplri7t!
 )
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 48.
  [47
@@ -1066,7 +1113,7 @@ Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 48.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 4BC480F740A3774FD1A93F4C999669BA;1386.
 Package rerunfilecheck Info: File `main.brf' has not changed.
-(rerunfilecheck)             Checksum: E4A6514B0198EDEB40CE3C77E867DFEF;671.
+(rerunfilecheck)             Checksum: 4E60B8DC849C0F8A8CFCEE88D45393B0;724.
 
 
 LaTeX Warning: There were undefined references.
@@ -1078,11 +1125,11 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 48.
 ### simple group (level 1) entered at line 46 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 11322 strings out of 493304
- 176059 string characters out of 6139870
- 376088 words of memory out of 5000000
- 14012 multiletter control sequences out of 15000+600000
- 73633 words of font info for 312 fonts, out of 8000000 for 9000
+ 11310 strings out of 493304
+ 176220 string characters out of 6139872
+ 377060 words of memory out of 5000000
+ 14008 multiletter control sequences out of 15000+600000
+ 73349 words of font info for 308 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  42i,15n,48p,860b,468s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</us
@@ -1099,10 +1146,10 @@ uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
 </usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (54 pages, 1054864 bytes).
+Output written on main.pdf (54 pages, 1054058 bytes).
 PDF statistics:
- 987 PDF objects out of 1000 (max. 8388607)
- 645 compressed objects within 7 object streams
- 141 named destinations out of 1000 (max. 500000)
+ 964 PDF objects out of 1000 (max. 8388607)
+ 625 compressed objects within 7 object streams
+ 138 named destinations out of 1000 (max. 500000)
  38149 words of extra memory for PDF output out of 42996 (max. 10000000)
 

@@ -1,5 +1,0 @@
-#!/bin/sh 
-pdflatex main.tex # get the paper
-bibtex   main.tex
-pdflatex main.tex # get the table of contents
-pdflatex main.tex
