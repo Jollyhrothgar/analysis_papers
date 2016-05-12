@@ -1,0 +1,41 @@
+\RequirePackage{lineno}
+\usepackage{verbatim} % to allow for block commments
+\usepackage{mathpple}
+\usepackage{float,graphicx}
+\usepackage[figuresright]{rotating}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{microtype}
+\usepackage{tabulary}
+\usepackage{booktabs,multirow,dcolumn,bigdelim}
+\newcommand{\otoprule}{\midrule[\heavyrulewidth]}
+\usepackage[pdftex,plainpages=false,pdfpagelabels,backref,pdfborder={0 0 0}]{hyperref}
+\usepackage{url}
+\usepackage[toc,page,titletoc]{appendix}
+\usepackage[small,bf]{caption}
+\setlength\captionmargin{15pt}
+\usepackage{moresize}
+\usepackage[scaled]{helvet}
+\usepackage{sectsty}
+\allsectionsfont{\normalfont\sffamily}
+\usepackage{titletoc}
+\usepackage[text={6.5in,8.75in},headheight=15pt,centering]{geometry}
+\setlength{\parindent}{0.0in}
+\setlength{\parskip}{0.1in}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{#1}{}}
+\fancyhead{} % clear all header fields 
+\fancyhead[RO,LE]{\sffamily \rightmark}
+\fancyhead[LO,RE]{\sffamily \leftmark}
+\fancyfoot{} % clear all footer fields 
+\fancyfoot[RO,LE]{\sffamily \thepage}
+\renewcommand{\headrulewidth}{0pt} 
+\fancypagestyle{plain}{%
+  \fancyhf{}
+  \fancyfoot[RO,LE]{\sffamily \thepage}
+}
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{1}
+\usepackage{amsmath}
+\usepackage{amssymb}
