@@ -1,9 +1,77 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                                                               %
-% Chapter: MultipleCollisions Mon Nov  2 11:22:55 PST 2015
-%                                                               %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\clearpage
 \chapter{Multiple Collisions}
 \label{ch:MultipleCollisions}
-This is the chapter on MultipleCollisions
+
+When more than one collision occurs during a bunch crossing, the BBC will
+undercount the collision rate. This will lower our overall calculated
+luminosity, and must be corrected. The BBC is capable of recording either 0 or 1
+collisions in a bunch crossing, but sometimes, there are more.
+
+The process of generating an event from two colliding bunches follows Poisson
+statistics, which characterize the probability distribution of an event which
+can either happen, or not. Here, we follow the notational convention
+of~\cite{Wolin2016}, and summarize the relevant portions of the work here. We
+define the `true' BBC rate as a parameter, $\mu$. For any collision at the
+PHENIX IR, we restrict the total number of possible scattering interactions to
+the following:
+
+\begin{itemize}
+  \item A collision occurs, but there are no hits in the BBC north or BBC south.
+    We can characterize the probability of this event with $\epsilon_0$.
+  \item A collision occurs, but only the BBC south registers a hit. We
+    characterize this probability with $\epsilon_S$. 
+  \item A collision occurs, but only the BBC north registers a hit. We
+    characterize this probability with $\epsilon_N$. 
+  \item A collision occurs and is registered in both BBCs. This probability is
+    characterized with $\epsilon_{NS}$.
+\end{itemize}
+
+Given that we have restricted these four outcomes to be the only possible
+outcomes, their probability must sum to unity.
+
+\begin{equation}
+  \epsilon_0 + \epsilon_S + \epsilon_N + \epsilon_{NS} = 1
+  \label{eq:bbc_collision_probabilty}
+\end{equation}
+
+Though Wolin includes a discussion of parameterizing the event collision
+probabilities into further subdivisions, which are physically motivated, but not
+well defined in terms of observables at PHENIX, I stick with the convention of
+using only what we may observe at PHENIX.
+
+Proceeding along with Wolin's work, we introduce two new probabilities:
+
+\begin{itemize}
+  \item $P_{kl}$ - The probability characterizing the condition when the north
+    BBC is hit by $k$ different collisions, and the south BBC is kit by $l$
+    different collisions.
+  \item $P(kl\vert N)$ - The probability of seeing $k$ collisions in the
+    north BBC and $l$ collisions in the south BBC, given that $N$ collisions
+    have occurred.
+\end{itemize}
+
+A caveat of the BBC and ZDC detectors is that, due to design limitations and/or
+practice, the detectors do not resolve individual hit times in the case where
+there are more than one collision.
+
+As an exercise, we can observe the process of calculating the simplest case for
+$P_{kl}$, which is when no events were observed in the north, or south BBCs,
+i.e., $P_{00}$. Recall that we wish to recover the true number of collisions,
+$N$. Therefore, $P_{00}$ is written as the sum of all conditional
+probabilities, $P(00|N)$ which satisfy $P_{kl} = P_{00}$:
+
+\begin{equation}
+  P_{00} = \sum_{i=0}^{\infty} P(00\vert i)P(i,\mu)
+  \label{eq:p_simple}
+\end{equation}
+
+That is to say, that any number of collisions may result in no detected
+collisions, so we must sum over all possible probabilities to obtain the true
+probability of i = N events producing no collisions. $P(i,\mu)$ is the Poisson
+probability distribution which represents the likelihood of i independent events
+occurring given an average event rate $\mu$. It is worth noting the rarity of pp
+collisions, when one considers the magnitude of the number of protons in two
+bunches - $\mathcal{O}(10^{11})$ compared to the order of collisions per bunch
+crossing - $\mathcal{O}(1)$.
+
+\edithere{}

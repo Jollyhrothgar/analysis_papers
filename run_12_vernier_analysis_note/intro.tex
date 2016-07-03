@@ -8,32 +8,40 @@
 %==============================================  Excecutive Summary
 \chapter{Introduction and Executive Summary}
 \label{ch:intro}
-The Vernier Scan Analysis is typically done every year, its purpose is to calculate the
-absolute luminosity of collisions delivered to PHENIX's interaction region (IR) by RHIC.
-Absolute luminosity is a necessary for the normalization of any cross-section (but not
-necessary for cross-section ratos).  
 
-The vernier analysis is done on a very special data set - obtained during a vernier scan.
-Unlike normal data taking, PHENIX must use a special trigger configuration optimized for
-recording very low rates of minimum bias data. The vernier scan itself consists of either
-the blue, or yellow beams, being incrementally scanned across the other stationary beam.
-If we assume that the blue and yellow beams are identical, this scan will effecitively
-show us the transverse dimensions of the blue and yellow beams - these dimenions are used
-to calculate the luminosity, $\mathcal{L}$, and to verify that our model for relativistic
-beam collisions is correct.
+\textcolor{red}{\textbf{NOTE THAT THIS IS A DRAFT, AND SOME SECTIONS EXIST AS MY
+ANNOTATIONS OF PUBLISHED WORK, NOT MY OWN. THE FINAL VERSION WILL BE PROPERLY
+QUOTED, CITED, ETC}}
 
-We can also use the vernier scan to calibrate the Beam Beam Counters (BBC) in order to use
-them as luminosity monitors. For any BBC trigger, we can represent the relationship
-between $\mathcal{L}$ and the cross section observed by the BBC as:
+The Vernier Scan Analysis is typically done every year, its purpose is to
+calculate the absolute luminosity of collisions delivered to PHENIX's
+interaction region (IR) by RHIC.  Absolute luminosity is a necessary for the
+normalization of any cross-section (but not necessary for cross-section ratos).  
+
+The vernier analysis is done on a very special data set - obtained during a
+vernier scan.  Unlike normal data taking, PHENIX must use a special trigger
+configuration optimized for recording very low rates of minimum bias data. The
+vernier scan itself consists of either the blue, or yellow beams, being
+incrementally scanned across the other stationary beam.  If we assume that the
+blue and yellow beams are identical, this scan will effecitively show us the
+transverse dimensions of the blue and yellow beams - these dimenions are used to
+calculate the luminosity, $\mathcal{L}$, and to verify that our model for
+relativistic beam collisions is correct.
+
+We can also use the vernier scan to calibrate the Beam Beam Counters (BBC) in
+order to use them as luminosity monitors. For any BBC trigger, we can represent
+the relationship between $\mathcal{L}$ and the cross section observed by the BBC
+as:
 
 \begin{equation} 
 \label{eq:lumi_xsec_simple} 
 \mathcal{L}_{BBC} = {R_{BBC}\over\sigma_{BBC}} 
 \end{equation}
 
-Where $\mathcal{L}_{BBC}$ is the effective luminosity delivered to a specific BBC trigger,
-$R_{BBC}$ is the live event rate of the BBC trigger, and $\sigma_{BBC}$ is defined as the
-cumulative cross section of events measured by this trigger.
+Where $\mathcal{L}_{BBC}$ is the effective luminosity delivered to a specific
+BBC trigger, $R_{BBC}$ is the live event rate of the BBC trigger, and
+$\sigma_{BBC}$ is defined as the cumulative cross section of events measured by
+this trigger.
 
 The absolute luminosity is calculated as:
 
@@ -42,22 +50,23 @@ The absolute luminosity is calculated as:
 \mathcal{L} = {f_{bunch}N_{b} N_{y}\over{2\pi\sigma_{x}\sigma_{y}}} 
 \end{equation}
 
-Where $\mathcal{L}$ is the luminosity, $f_{bunch}$ is the frequency of each individual
-bunch crossing, $N_{b}, N_{y}$ are the bunch populations for the specific blue and yellow
-beams, resepectively, and $\sigma_{x}, \sigma_{y}$ are the transverse widths both bunches
-in the x and y directions. We assume identical beam bunch distributions for the blue and
-yellow beams ~\cite{AN888Datta2010}, however individual bunches can also be studied - and this
-analysis is presented in this note. $f_{bunch}$ corresponds to the bunch crossing rate of
-a single specific bunch, and depends on the number of bunches in a specific fill and the
-blue beam clock.
+Where $\mathcal{L}$ is the luminosity, $f_{bunch}$ is the frequency of each
+individual bunch crossing, $N_{b}, N_{y}$ are the bunch populations for the
+specific blue and yellow beams, resepectively, and $\sigma_{x}, \sigma_{y}$ are
+the transverse widths both bunches in the x and y directions. We assume
+identical beam bunch distributions for the blue and yellow beams
+~\cite{AN888Datta2010}, however individual bunches can also be studied - and
+this analysis is presented in this note. $f_{bunch}$ corresponds to the bunch
+crossing rate of a single specific bunch, and depends on the number of bunches
+in a specific fill and the blue beam clock.
 
-For clarity: The blue beam clock ticks once every time there is a bunch crossing.
-Therefore, for $120$ bunch fills (including filled and empty bunches), and the standard
-blue beam clock frequency, $f_{clock}$, of $9.36 MHz$, $f_{bunch} \equiv f_{clock} / 120 =
-78 kHz$.
+For clarity: The blue beam clock ticks once every time there is a bunch
+crossing.  Therefore, for $120$ bunch fills (including filled and empty
+bunches), and the standard blue beam clock frequency, $f_{clock}$, of $9.36
+MHz$, $f_{bunch} \equiv f_{clock} / 120 = 78 kHz$.
 
-Previous analysis notes on the vernier analysis are listed below for benefit/curiosity of
-the reader:
+Previous analysis notes on the vernier analysis are listed below for
+benefit/curiosity of the reader:
 
 \begin{itemize}
 \item AN184~\cite{AN184Belikov2003}
@@ -67,10 +76,10 @@ the reader:
 \end{itemize}
 
 Global vernier scan characteristics are summarized in table
-~\ref{tab:global_scan_summary}. Each vernier scan is done slightly differently as a
-systematic check - beam scan order is varied, beam energy is varied, scan length and step
-length is varied, and scanning patterns are varied. We expect that these variations will
-not affect our final result.
+~\ref{tab:global_scan_summary}. Each vernier scan is done slightly differently
+as a systematic check - beam scan order is varied, beam energy is varied, scan
+length and step length is varied, and scanning patterns are varied. We expect
+that these variations will not affect our final result.
 
 \input{./tables/global_scan_summary.tex}
 \input{./figures/scan_patterns.tex}
