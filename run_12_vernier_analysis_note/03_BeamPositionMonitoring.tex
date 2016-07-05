@@ -1,10 +1,3 @@
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                                                               %
-% Chapter: BeamPositionMonitoring Thu Sep 24 16:02:10 EDT 2015
-%                                                               %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \chapter{Beam Position Monitoring}
 \label{ch:BeamPositionMonitoring}
 
@@ -32,11 +25,265 @@ beam displacements. We can see summarized the difference betweeen planned steps,
 and real steps summarized in tables
 \textcolor{red}{\textbf{missing-tab plannedsteps}}
 
-\input{./tables/plannedsteps359711.tex}
-\input{./tables/plannedsteps360879.tex}
-\input{./tables/plannedsteps362492.tex}
-\input{./tables/plannedsteps364636.tex}
-\input{./tables/plannedsteps365866.tex}
-\input{./tables/plannedsteps366605.tex}
-\input{./tables/plannedsteps367138.tex}
+\begin{table}
+\centering
+\begin{tabular}{c c c c c c c c}
+\toprule
+\textbf{$CAD_{x}$} & \textbf{$BPM_{x}$ } & \textbf{$\Delta_{x}$} &\textbf{$CAD_{y}$} & \textbf{$BPM_{y}$} & \textbf{$\Delta_{y}$} & \textbf{$BPM_{tot}$} & \textbf{$\Delta_{tot}$} \\
+($10^{-5} m$) & ($10^{-5} m$) & (\%diff) & ($10^{-5} m$) & ($10^{-5} m$) & (\%diff) & ($10^{-5} m$) & (\%diff) \\
+\midrule
+-1000.00 & -1103.61 &  (10 \%) & 0.00 & 8.07 &  & 1103.64 &  (10 \%)\\
+-750.00 & -854.70 &  (14 \%) & 0.00 & 10.67 &  & 854.77 &  (14 \%)\\
+-600.00 & -720.00 &  (20 \%) & 0.00 & 11.86 &  & 720.10 &  (20 \%)\\
+-450.00 & -567.61 &  (26 \%) & 0.00 & 13.04 &  & 567.76 &  (26 \%)\\
+-300.00 & -419.25 &  (40 \%) & 0.00 & 14.25 &  & 419.49 &  (40 \%)\\
+-150.00 & -258.89 &  (73 \%) & 0.00 & 16.00 &  & 259.39 &  (73 \%)\\
+0.00 & -106.14 &  & 0.00 & 17.32 &  & 107.55 & \\
+150.00 & 63.04 &  (58 \%) & 0.00 & 20.89 &  & 66.41 &  (56 \%)\\
+300.00 & 227.11 &  (24 \%) & 0.00 & 21.36 &  & 228.11 &  (24 \%)\\
+450.00 & 391.46 &  (13 \%) & 0.00 & 24.82 &  & 392.25 &  (13 \%)\\
+600.00 & 542.27 &  (10 \%) & 0.00 & 28.10 &  & 542.99 &  (10 \%)\\
+750.00 & 689.36 &  (8 \%) & 0.00 & 30.36 &  & 690.03 &  (8 \%)\\
+1000.00 & 940.39 &  (6 \%) & 0.00 & 34.04 &  & 941.01 &  (6 \%)\\
+0.00 & -93.96 &  & -1000.00 & -1017.07 &  (2 \%) & 1021.40 &  (2 \%)\\
+0.00 & -94.75 &  & -750.00 & -767.29 &  (2 \%) & 773.11 &  (3 \%)\\
+0.00 & -95.25 &  & -600.00 & -620.36 &  (3 \%) & 627.63 &  (5 \%)\\
+0.00 & -97.21 &  & -450.00 & -470.18 &  (4 \%) & 480.12 &  (7 \%)\\
+0.00 & -98.07 &  & -300.00 & -317.89 &  (6 \%) & 332.68 &  (11 \%)\\
+0.00 & -98.00 &  & -150.00 & -158.64 &  (6 \%) & 186.47 &  (24 \%)\\
+0.00 & -98.60 &  & 0.00 & 14.27 &  & 99.63 & \\
+0.00 & -98.50 &  & 150.00 & 176.64 &  (18 \%) & 202.25 &  (35 \%)\\
+0.00 & -97.36 &  & 300.00 & 343.18 &  (14 \%) & 356.72 &  (19 \%)\\
+0.00 & -94.21 &  & 450.00 & 508.79 &  (13 \%) & 517.44 &  (15 \%)\\
+0.00 & -92.67 &  & 600.00 & 658.70 &  (10 \%) & 665.19 &  (11 \%)\\
+0.00 & -90.95 &  & 750.00 & 803.25 &  (7 \%) & 808.38 &  (8 \%)\\
+0.00 & -88.57 &  & 1000.00 & 1063.50 &  (6 \%) & 1067.18 &  (7 \%)\\
+\bottomrule
+\end{tabular}
+\caption{ BPM data compared to CAD data for run 359711. Columns are from left to right, we see the CAD planned horizontal beam displacement, the bpm-measured horizontal beam displacement, $||CAD_{x}| - |BPM_{x}||$ (to account for polarity flips in bpm), the CAD planned vertical beam displacement, the bpm-measured beam displacement, $||CAD_{y}| - |BPM_{y}||$, the total beam separation ($\sqrt{BPM_{x}^2+BPM_{y}^2}$) and the difference between the measured total separation and the CAD planned total separation. Nominally, CAD promises to hold one beam fixed, and scan the other beam. Rows are each scan step planned and measured for the run. }
+\end{table}
+
+\begin{table}
+\centering
+\begin{tabular}{c c c c c c c c}
+\toprule
+\textbf{$CAD_{x}$} & \textbf{$BPM_{x}$ } & \textbf{$\Delta_{x}$} &\textbf{$CAD_{y}$} & \textbf{$BPM_{y}$} & \textbf{$\Delta_{y}$} & \textbf{$BPM_{tot}$} & \textbf{$\Delta_{tot}$} \\
+($10^{-5} m$) & ($10^{-5} m$) & (\%diff) & ($10^{-5} m$) & ($10^{-5} m$) & (\%diff) & ($10^{-5} m$) & (\%diff) \\
+\midrule
+1000.00 & -1002.45 &  (0 \%) & 0.00 & 64.83 &  & 1004.55 &  (0 \%)\\
+750.00 & -758.34 &  (1 \%) & 0.00 & 64.38 &  & 761.07 &  (1 \%)\\
+600.00 & -617.17 &  (3 \%) & 0.00 & 64.83 &  & 620.56 &  (3 \%)\\
+450.00 & -462.77 &  (3 \%) & 0.00 & 63.90 &  & 467.16 &  (4 \%)\\
+300.00 & -310.67 &  (4 \%) & 0.00 & 65.70 &  & 317.54 &  (6 \%)\\
+150.00 & -150.77 &  (1 \%) & 0.00 & 64.43 &  & 163.96 &  (9 \%)\\
+0.00 & 14.63 &  & 0.00 & 63.37 &  & 65.03 & \\
+-150.00 & 187.85 &  (25 \%) & 0.00 & 63.54 &  & 198.30 &  (32 \%)\\
+-300.00 & 349.90 &  (17 \%) & 0.00 & 63.47 &  & 355.61 &  (19 \%)\\
+-450.00 & 505.68 &  (12 \%) & 0.00 & 63.04 &  & 509.59 &  (13 \%)\\
+-600.00 & 654.33 &  (9 \%) & 0.00 & 64.47 &  & 657.50 &  (10 \%)\\
+-750.00 & 804.53 &  (7 \%) & 0.00 & 63.97 &  & 807.07 &  (8 \%)\\
+-1000.00 & 1049.00 &  (5 \%) & 0.00 & 64.92 &  & 1051.01 &  (5 \%)\\
+0.00 & 28.71 &  & 1000.00 & -970.71 &  (3 \%) & 971.14 &  (3 \%)\\
+0.00 & 28.00 &  & 750.00 & -729.57 &  (3 \%) & 730.10 &  (3 \%)\\
+0.00 & 28.63 &  & 600.00 & -573.67 &  (4 \%) & 574.38 &  (4 \%)\\
+0.00 & 29.43 &  & 450.00 & -433.07 &  (4 \%) & 434.07 &  (4 \%)\\
+0.00 & 28.16 &  & 300.00 & -277.50 &  (8 \%) & 278.92 &  (7 \%)\\
+0.00 & 27.40 &  & 150.00 & -105.50 &  (30 \%) & 109.00 &  (27 \%)\\
+0.00 & 25.23 &  & 0.00 & 62.73 &  & 67.62 & \\
+0.00 & 24.37 &  & -150.00 & 221.73 &  (48 \%) & 223.07 &  (49 \%)\\
+0.00 & 25.08 &  & -300.00 & 394.88 &  (32 \%) & 395.68 &  (32 \%)\\
+0.00 & 24.96 &  & -450.00 & 553.11 &  (23 \%) & 553.67 &  (23 \%)\\
+0.00 & 23.71 &  & -600.00 & 701.89 &  (17 \%) & 702.29 &  (17 \%)\\
+0.00 & 25.25 &  & -750.00 & 852.71 &  (14 \%) & 853.09 &  (14 \%)\\
+0.00 & 23.27 &  & -1000.00 & 1105.00 &  (10 \%) & 1105.25 &  (11 \%)\\
+\bottomrule
+\end{tabular}
+\caption{ BPM data compared to CAD data for run 360879. Columns are from left to right, we see the CAD planned horizontal beam displacement, the bpm-measured horizontal beam displacement, $||CAD_{x}| - |BPM_{x}||$ (to account for polarity flips in bpm), the CAD planned vertical beam displacement, the bpm-measured beam displacement, $||CAD_{y}| - |BPM_{y}||$, the total beam separation ($\sqrt{BPM_{x}^2+BPM_{y}^2}$) and the difference between the measured total separation and the CAD planned total separation. Nominally, CAD promises to hold one beam fixed, and scan the other beam. Rows are each scan step planned and measured for the run. }
+\end{table}
+
+\begin{table}
+\centering
+\begin{tabular}{c c c c c c c c}
+\toprule
+\textbf{$CAD_{x}$} & \textbf{$BPM_{x}$ } & \textbf{$\Delta_{x}$} &\textbf{$CAD_{y}$} & \textbf{$BPM_{y}$} & \textbf{$\Delta_{y}$} & \textbf{$BPM_{tot}$} & \textbf{$\Delta_{tot}$} \\
+($10^{-5} m$) & ($10^{-5} m$) & (\%diff) & ($10^{-5} m$) & ($10^{-5} m$) & (\%diff) & ($10^{-5} m$) & (\%diff) \\
+\midrule
+0.00 & 39.32 &  & 1000.00 & 1134.03 &  (13 \%) & 1134.71 &  (13 \%)\\
+0.00 & 38.60 &  & 750.00 & 884.00 &  (18 \%) & 884.84 &  (18 \%)\\
+0.00 & 37.77 &  & 600.00 & 735.70 &  (23 \%) & 736.67 &  (23 \%)\\
+0.00 & 36.37 &  & 450.00 & 587.30 &  (31 \%) & 588.42 &  (31 \%)\\
+0.00 & 36.60 &  & 300.00 & 422.33 &  (41 \%) & 423.92 &  (41 \%)\\
+0.00 & 36.03 &  & 150.00 & 264.10 &  (76 \%) & 266.55 &  (78 \%)\\
+0.00 & 35.36 &  & 0.00 & 98.25 &  & 104.42 & \\
+0.00 & 35.54 &  & -150.00 & -79.54 &  (47 \%) & 87.11 &  (42 \%)\\
+0.00 & 34.79 &  & -300.00 & -245.00 &  (18 \%) & 247.46 &  (18 \%)\\
+0.00 & 33.82 &  & -450.00 & -399.00 &  (11 \%) & 400.43 &  (11 \%)\\
+0.00 & 33.83 &  & -600.00 & -555.93 &  (7 \%) & 556.96 &  (7 \%)\\
+0.00 & 32.50 &  & -750.00 & -705.93 &  (6 \%) & 706.68 &  (6 \%)\\
+0.00 & 32.25 &  & -1000.00 & -958.38 &  (4 \%) & 958.92 &  (4 \%)\\
+1000.00 & 1074.84 &  (7 \%) & 0.00 & 104.80 &  & 1079.94 &  (8 \%)\\
+750.00 & 832.50 &  (11 \%) & 0.00 & 102.56 &  & 838.79 &  (12 \%)\\
+600.00 & 680.97 &  (13 \%) & 0.00 & 100.27 &  & 688.31 &  (15 \%)\\
+450.00 & 528.89 &  (18 \%) & 0.00 & 97.68 &  & 537.84 &  (20 \%)\\
+300.00 & 367.29 &  (22 \%) & 0.00 & 95.75 &  & 379.56 &  (27 \%)\\
+150.00 & 215.44 &  (44 \%) & 0.00 & 92.94 &  & 234.63 &  (56 \%)\\
+0.00 & 43.07 &  & 0.00 & 90.23 &  & 99.98 & \\
+-150.00 & -123.21 &  (18 \%) & 0.00 & 89.32 &  & 152.18 &  (1 \%)\\
+-300.00 & -293.20 &  (2 \%) & 0.00 & 88.00 &  & 306.12 &  (2 \%)\\
+-450.00 & -440.63 &  (2 \%) & 0.00 & 85.10 &  & 448.78 &  (0 \%)\\
+-600.00 & -597.93 &  (0 \%) & 0.00 & 83.50 &  & 603.74 &  (1 \%)\\
+-750.00 & -744.61 &  (1 \%) & 0.00 & 82.71 &  & 749.19 &  (0 \%)\\
+-1000.00 & -990.64 &  (1 \%) & 0.00 & 79.35 &  & 993.81 &  (1 \%)\\
+\bottomrule
+\end{tabular}
+\caption{ BPM data compared to CAD data for run 362492. Columns are from left to right, we see the CAD planned horizontal beam displacement, the bpm-measured horizontal beam displacement, $||CAD_{x}| - |BPM_{x}||$ (to account for polarity flips in bpm), the CAD planned vertical beam displacement, the bpm-measured beam displacement, $||CAD_{y}| - |BPM_{y}||$, the total beam separation ($\sqrt{BPM_{x}^2+BPM_{y}^2}$) and the difference between the measured total separation and the CAD planned total separation. Nominally, CAD promises to hold one beam fixed, and scan the other beam. Rows are each scan step planned and measured for the run. }
+\end{table}
+
+\begin{table}
+\centering
+\begin{tabular}{c c c c c c c c}
+\toprule
+\textbf{$CAD_{x}$} & \textbf{$BPM_{x}$ } & \textbf{$\Delta_{x}$} &\textbf{$CAD_{y}$} & \textbf{$BPM_{y}$} & \textbf{$\Delta_{y}$} & \textbf{$BPM_{tot}$} & \textbf{$\Delta_{tot}$} \\
+($10^{-5} m$) & ($10^{-5} m$) & (\%diff) & ($10^{-5} m$) & ($10^{-5} m$) & (\%diff) & ($10^{-5} m$) & (\%diff) \\
+\midrule
+200.00 & -183.60 &  (8 \%) & 0.00 & 22.50 &  & 184.97 &  (8 \%)\\
+400.00 & -382.50 &  (4 \%) & 0.00 & 23.50 &  & 383.22 &  (4 \%)\\
+600.00 & -581.25 &  (3 \%) & 0.00 & 23.33 &  & 581.72 &  (3 \%)\\
+800.00 & -777.70 &  (3 \%) & 0.00 & 23.80 &  & 778.06 &  (3 \%)\\
+0.00 & 41.30 &  & 0.00 & 25.40 &  & 48.49 & \\
+-200.00 & 267.83 &  (34 \%) & 0.00 & 23.17 &  & 268.83 &  (34 \%)\\
+-400.00 & 467.83 &  (17 \%) & 0.00 & 23.00 &  & 468.40 &  (17 \%)\\
+-600.00 & 667.83 &  (11 \%) & 0.00 & 23.42 &  & 668.24 &  (11 \%)\\
+-800.00 & 863.17 &  (8 \%) & 0.00 & 24.00 &  & 863.50 &  (8 \%)\\
+0.00 & 46.70 &  & 200.00 & -201.50 &  (1 \%) & 206.84 &  (3 \%)\\
+0.00 & 47.92 &  & 400.00 & -399.75 &  (0 \%) & 402.61 &  (1 \%)\\
+0.00 & 48.58 &  & 600.00 & -600.50 &  (0 \%) & 602.46 &  (0 \%)\\
+0.00 & 49.60 &  & 800.00 & -797.20 &  (0 \%) & 798.74 &  (0 \%)\\
+0.00 & 47.10 &  & 0.00 & 26.00 &  & 53.80 & \\
+0.00 & 46.42 &  & -200.00 & 248.58 &  (24 \%) & 252.88 &  (26 \%)\\
+0.00 & 45.67 &  & -400.00 & 455.33 &  (14 \%) & 457.62 &  (14 \%)\\
+0.00 & 45.33 &  & -600.00 & 652.75 &  (9 \%) & 654.32 &  (9 \%)\\
+0.00 & 44.92 &  & -800.00 & 851.08 &  (6 \%) & 852.27 &  (7 \%)\\
+\bottomrule
+\end{tabular}
+\caption{ BPM data compared to CAD data for run 364636. Columns are from left to right, we see the CAD planned horizontal beam displacement, the bpm-measured horizontal beam displacement, $||CAD_{x}| - |BPM_{x}||$ (to account for polarity flips in bpm), the CAD planned vertical beam displacement, the bpm-measured beam displacement, $||CAD_{y}| - |BPM_{y}||$, the total beam separation ($\sqrt{BPM_{x}^2+BPM_{y}^2}$) and the difference between the measured total separation and the CAD planned total separation. Nominally, CAD promises to hold one beam fixed, and scan the other beam. Rows are each scan step planned and measured for the run. }
+\end{table}
+
+\begin{table}
+\centering
+\begin{tabular}{c c c c c c c c}
+\toprule
+\textbf{$CAD_{x}$} & \textbf{$BPM_{x}$ } & \textbf{$\Delta_{x}$} &\textbf{$CAD_{y}$} & \textbf{$BPM_{y}$} & \textbf{$\Delta_{y}$} & \textbf{$BPM_{tot}$} & \textbf{$\Delta_{tot}$} \\
+($10^{-5} m$) & ($10^{-5} m$) & (\%diff) & ($10^{-5} m$) & ($10^{-5} m$) & (\%diff) & ($10^{-5} m$) & (\%diff) \\
+\midrule
+-600.00 & -577.90 &  (4 \%) & 0.00 & -6.73 &  & 577.94 &  (4 \%)\\
+-400.00 & -385.42 &  (4 \%) & 0.00 & -3.75 &  & 385.43 &  (4 \%)\\
+-320.00 & -305.67 &  (4 \%) & 0.00 & -2.68 &  & 305.68 &  (4 \%)\\
+-240.00 & -226.53 &  (6 \%) & 0.00 & -1.53 &  & 226.53 &  (6 \%)\\
+-160.00 & -140.53 &  (12 \%) & 0.00 & -0.53 &  & 140.53 &  (12 \%)\\
+-80.00 & -50.83 &  (36 \%) & 0.00 & 1.10 &  & 50.85 &  (36 \%)\\
+0.00 & 38.33 &  & 0.00 & 3.87 &  & 38.53 & \\
+80.00 & 134.70 &  (68 \%) & 0.00 & 4.23 &  & 134.77 &  (68 \%)\\
+160.00 & 224.25 &  (40 \%) & 0.00 & 5.25 &  & 224.31 &  (40 \%)\\
+240.00 & 308.87 &  (29 \%) & 0.00 & 6.00 &  & 308.93 &  (29 \%)\\
+320.00 & 391.42 &  (22 \%) & 0.00 & 7.13 &  & 391.49 &  (22 \%)\\
+400.00 & 469.58 &  (17 \%) & 0.00 & 8.22 &  & 469.66 &  (17 \%)\\
+600.00 & 665.71 &  (11 \%) & 0.00 & 10.44 &  & 665.79 &  (11 \%)\\
+0.00 & 39.85 &  & -600.00 & -629.28 &  (5 \%) & 630.54 &  (5 \%)\\
+0.00 & 39.78 &  & -400.00 & -431.41 &  (8 \%) & 433.24 &  (8 \%)\\
+0.00 & 40.08 &  & -320.00 & -354.02 &  (11 \%) & 356.29 &  (11 \%)\\
+0.00 & 40.55 &  & -240.00 & -269.69 &  (12 \%) & 272.73 &  (14 \%)\\
+0.00 & 41.57 &  & -160.00 & -184.77 &  (15 \%) & 189.38 &  (18 \%)\\
+0.00 & 41.75 &  & -80.00 & -93.50 &  (17 \%) & 102.40 &  (28 \%)\\
+0.00 & 41.88 &  & 0.00 & 1.69 &  & 41.91 & \\
+0.00 & 43.00 &  & 80.00 & 90.91 &  (14 \%) & 100.56 &  (26 \%)\\
+0.00 & 42.57 &  & 160.00 & 184.73 &  (15 \%) & 189.57 &  (18 \%)\\
+0.00 & 41.21 &  & 240.00 & 271.82 &  (13 \%) & 274.92 &  (15 \%)\\
+0.00 & 41.11 &  & 320.00 & 356.32 &  (11 \%) & 358.68 &  (12 \%)\\
+0.00 & 41.69 &  & 400.00 & 437.19 &  (9 \%) & 439.18 &  (10 \%)\\
+0.00 & 42.33 &  & 600.00 & 636.48 &  (6 \%) & 637.88 &  (6 \%)\\
+\bottomrule
+\end{tabular}
+\caption{ BPM data compared to CAD data for run 365866. Columns are from left to right, we see the CAD planned horizontal beam displacement, the bpm-measured horizontal beam displacement, $||CAD_{x}| - |BPM_{x}||$ (to account for polarity flips in bpm), the CAD planned vertical beam displacement, the bpm-measured beam displacement, $||CAD_{y}| - |BPM_{y}||$, the total beam separation ($\sqrt{BPM_{x}^2+BPM_{y}^2}$) and the difference between the measured total separation and the CAD planned total separation. Nominally, CAD promises to hold one beam fixed, and scan the other beam. Rows are each scan step planned and measured for the run. }
+\label{0xffd6370c}
+\end{table}
+
+\begin{table}
+\centering
+\begin{tabular}{c c c c c c c c}
+\toprule
+\textbf{$CAD_{x}$} & \textbf{$BPM_{x}$ } & \textbf{$\Delta_{x}$} &\textbf{$CAD_{y}$} & \textbf{$BPM_{y}$} & \textbf{$\Delta_{y}$} & \textbf{$BPM_{tot}$} & \textbf{$\Delta_{tot}$} \\
+($10^{-5} m$) & ($10^{-5} m$) & (\%diff) & ($10^{-5} m$) & ($10^{-5} m$) & (\%diff) & ($10^{-5} m$) & (\%diff) \\
+\midrule
+-600.00 & 677.17 &  (13 \%) & 0.00 & 5.79 &  & 677.19 &  (13 \%)\\
+-400.00 & 481.89 &  (20 \%) & 0.00 & 6.56 &  & 481.93 &  (20 \%)\\
+-320.00 & 408.56 &  (28 \%) & 0.00 & 7.94 &  & 408.64 &  (28 \%)\\
+-240.00 & 330.50 &  (38 \%) & 0.00 & 7.45 &  & 330.58 &  (38 \%)\\
+-160.00 & 243.18 &  (52 \%) & 0.00 & 6.07 &  & 243.25 &  (52 \%)\\
+-80.00 & 150.77 &  (88 \%) & 0.00 & 4.47 &  & 150.83 &  (89 \%)\\
+0.00 & 56.41 &  & 0.00 & 4.85 &  & 56.62 & \\
+80.00 & -38.10 &  (52 \%) & 0.00 & 4.97 &  & 38.42 &  (52 \%)\\
+160.00 & -129.58 &  (19 \%) & 0.00 & 4.68 &  & 129.66 &  (19 \%)\\
+240.00 & -213.16 &  (11 \%) & 0.00 & 5.05 &  & 213.22 &  (11 \%)\\
+320.00 & -292.25 &  (9 \%) & 0.00 & 7.75 &  & 292.35 &  (9 \%)\\
+400.00 & -373.50 &  (7 \%) & 0.00 & 5.88 &  & 373.55 &  (7 \%)\\
+600.00 & -571.65 &  (5 \%) & 0.00 & 6.93 &  & 571.69 &  (5 \%)\\
+0.00 & 48.52 &  & -600.00 & 631.83 &  (5 \%) & 633.69 &  (6 \%)\\
+0.00 & 51.12 &  & -400.00 & 437.19 &  (9 \%) & 440.17 &  (10 \%)\\
+0.00 & 51.72 &  & -320.00 & 360.19 &  (13 \%) & 363.89 &  (14 \%)\\
+0.00 & 52.21 &  & -240.00 & 278.79 &  (16 \%) & 283.64 &  (18 \%)\\
+0.00 & 51.40 &  & -160.00 & 195.13 &  (22 \%) & 201.79 &  (26 \%)\\
+0.00 & 50.93 &  & -80.00 & 104.20 &  (30 \%) & 115.98 &  (45 \%)\\
+0.00 & 50.89 &  & 0.00 & 10.46 &  & 51.96 & \\
+0.00 & 50.97 &  & 80.00 & -84.63 &  (6 \%) & 98.79 &  (23 \%)\\
+0.00 & 51.15 &  & 160.00 & -173.54 &  (8 \%) & 180.92 &  (13 \%)\\
+0.00 & 52.15 &  & 240.00 & -258.91 &  (8 \%) & 264.11 &  (10 \%)\\
+0.00 & 52.56 &  & 320.00 & -341.56 &  (7 \%) & 345.58 &  (8 \%)\\
+0.00 & 53.44 &  & 400.00 & -416.78 &  (4 \%) & 420.19 &  (5 \%)\\
+0.00 & 54.71 &  & 600.00 & -616.50 &  (3 \%) & 618.92 &  (3 \%)\\
+\bottomrule
+\end{tabular}
+\caption{ BPM data compared to CAD data for run 366605. Columns are from left to right, we see the CAD planned horizontal beam displacement, the bpm-measured horizontal beam displacement, $||CAD_{x}| - |BPM_{x}||$ (to account for polarity flips in bpm), the CAD planned vertical beam displacement, the bpm-measured beam displacement, $||CAD_{y}| - |BPM_{y}||$, the total beam separation ($\sqrt{BPM_{x}^2+BPM_{y}^2}$) and the difference between the measured total separation and the CAD planned total separation. Nominally, CAD promises to hold one beam fixed, and scan the other beam. Rows are each scan step planned and measured for the run. }
+\end{table}
+
+
+\begin{table}
+\centering
+\begin{tabular}{c c c c c c c c}
+\toprule
+\textbf{$CAD_{x}$} & \textbf{$BPM_{x}$ } & \textbf{$\Delta_{x}$} &\textbf{$CAD_{y}$} & \textbf{$BPM_{y}$} & \textbf{$\Delta_{y}$} & \textbf{$BPM_{tot}$} & \textbf{$\Delta_{tot}$} \\
+($10^{-5} m$) & ($10^{-5} m$) & (\%diff) & ($10^{-5} m$) & ($10^{-5} m$) & (\%diff) & ($10^{-5} m$) & (\%diff) \\
+\midrule
+-600.00 & -588.44 &  (2 \%) & 0.00 & -3.98 &  & 588.45 &  (2 \%)\\
+-400.00 & -396.78 &  (1 \%) & 0.00 & -0.12 &  & 396.78 &  (1 \%)\\
+-320.00 & -319.86 &  (0 \%) & 0.00 & -0.67 &  & 319.86 &  (0 \%)\\
+-240.00 & -242.17 &  (1 \%) & 0.00 & 1.89 &  & 242.17 &  (1 \%)\\
+-160.00 & -158.47 &  (1 \%) & 0.00 & 2.88 &  & 158.50 &  (1 \%)\\
+-80.00 & -63.33 &  (21 \%) & 0.00 & 3.88 &  & 63.45 &  (21 \%)\\
+0.00 & 35.20 &  & 0.00 & 4.53 &  & 35.49 & \\
+80.00 & 135.30 &  (69 \%) & 0.00 & 4.97 &  & 135.39 &  (69 \%)\\
+160.00 & 229.44 &  (43 \%) & 0.00 & 6.00 &  & 229.52 &  (43 \%)\\
+240.00 & 315.29 &  (31 \%) & 0.00 & 7.91 &  & 315.39 &  (31 \%)\\
+320.00 & 396.29 &  (24 \%) & 0.00 & 7.32 &  & 396.36 &  (24 \%)\\
+400.00 & 471.53 &  (18 \%) & 0.00 & 7.69 &  & 471.59 &  (18 \%)\\
+600.00 & 666.17 &  (11 \%) & 0.00 & 10.67 &  & 666.25 &  (11 \%)\\
+0.00 & 38.91 &  & -600.00 & -635.34 &  (6 \%) & 636.53 &  (6 \%)\\
+0.00 & 38.59 &  & -400.00 & -438.25 &  (10 \%) & 439.95 &  (10 \%)\\
+0.00 & 38.75 &  & -320.00 & -359.68 &  (12 \%) & 361.76 &  (13 \%)\\
+0.00 & 39.08 &  & -240.00 & -277.36 &  (16 \%) & 280.10 &  (17 \%)\\
+0.00 & 38.77 &  & -160.00 & -193.11 &  (21 \%) & 196.96 &  (23 \%)\\
+0.00 & 39.17 &  & -80.00 & -96.79 &  (21 \%) & 104.41 &  (31 \%)\\
+0.00 & 41.33 &  & 0.00 & 3.43 &  & 41.48 & \\
+0.00 & 41.79 &  & 80.00 & 106.54 &  (33 \%) & 114.44 &  (43 \%)\\
+0.00 & 42.97 &  & 160.00 & 196.62 &  (23 \%) & 201.27 &  (26 \%)\\
+0.00 & 42.50 &  & 240.00 & 282.81 &  (18 \%) & 285.99 &  (19 \%)\\
+0.00 & 41.45 &  & 320.00 & 364.29 &  (14 \%) & 366.64 &  (15 \%)\\
+0.00 & 41.41 &  & 400.00 & 442.75 &  (11 \%) & 444.68 &  (11 \%)\\
+0.00 & 41.38 &  & 600.00 & 642.98 &  (7 \%) & 644.31 &  (7 \%)\\
+\bottomrule
+\end{tabular}
+\caption{ 
+  BPM data compared to CAD data for run 367138. Columns are from left to right, we see the CAD planned horizontal beam displacement, the bpm-measured horizontal beam displacement, $||CAD_{x}| - |BPM_{x}||$ (to account for polarity flips in bpm), the CAD planned vertical beam displacement, the bpm-measured beam displacement, $||CAD_{y}| - |BPM_{y}||$, the total beam separation ($\sqrt{BPM_{x}^2+BPM_{y}^2}$) and the difference between the measured total separation and the CAD planned total separation. Nominally, CAD promises to hold one beam fixed, and scan the other beam. Rows are each scan step planned and measured for the run. 
+}
+\end{table}
 

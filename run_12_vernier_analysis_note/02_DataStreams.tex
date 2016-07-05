@@ -141,8 +141,33 @@ contains the following fields:
 \item yellow beam, sector 8 y position
 \end{itemize}
 
-\input{./figures/bpm_schematic_cartoon.tex}
-\input{./figures/bpm_ir_xing_cartoon.tex}
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[width=1.0\linewidth]{./figures/bpm_schematic}
+    \caption{ Beam Current induces a time dependent voltage proportional to the derivative of
+      the beam current itself. BPM electronics use a comparator circuit, and the readings from
+      X1/2 and Y1/2 to determine the X and Y beam positions. The absolute measurement of beam
+      position is subject to offsets stemming from various effects, however, relative positions
+    (say of one beam to another) are reliable.~\cite{kawallfocus2005}}
+    \label{fig:bpm_schematic_cartoon}
+  \end{center}
+\end{figure}
+
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[width=1.0\linewidth]{./figures/bpm_ir_beam_separation}
+\caption{We define three parallel planes, each plane is perpendicular to the beam axis.
+The planes are at the Sector 7 BPM, the PHENIX IR, and Sector 8 BPM. We assume that the
+two BPM planes are equidistant from the PHENIX IR. We can geometrically solve for a three
+dimensional line intersecting all three planes, since we have access, for each beam,
+intersection points for a given beam at Sector 7 and Sectro 8. With this information, we
+determine the intersection points in the transverse plane in the PHENIX IR, and then use
+the two intersection points at the IR plane of the blue and yellow beams to calculate
+relative beam separation, in both horizontal and vertical directions.}
+\label{fig:bpm_ir_xing_cartoon}
+\end{center}
+\end{figure}
 
 \section{PHENIX Raw Data Format} 
 
@@ -230,7 +255,26 @@ in "SCALEREVENT" packets and find the ratio between those events and live events
 contained in "SCALEREVENT" packets.
 % need to format initial columns so that there is more room (can we wrap text in a
 % header?)
-\input{./tables/prdf_data_summary.tex}
+\begin{sidewaystable}[ht]
+\centering
+\begin{tabular}{ l l p{6cm} p{8cm} }
+\toprule
+\textbf{Source} & \textbf{Field} & \textbf{Description} & \textbf{Application} \\
+\midrule 
+Event Header & EPOCHTIME & Standard unix time & Time ordering data, Calculation of real-time GL1-1P scaler rates \\
+ & ATPNUMBER & ID for ATP handling this event & Synchronization of EPOCHTIME for all events \\
+ & RUNNUMBER & Standard PHENIX run ordering & \\
+ & EVENTNUMBER & Unique identifier showing order in which DAQ processed events & Unique sorting key, proxy for time \\
+Packet 140008 & GL1-1P 0 & "BBCLL1(\textgreater0 tubes)" & Counts live events between recorded events \\
+ & GL1-1P 1 & "CLOCK" & "" \\
+ & GL1-1P 2 & "ZDCLL1Wide" & "" \\
+ & GL1-1P 3 & "ZDCLL1Narrow" & "" \\
+Packet 140001 & Gl1-Crossing ID & Identify bunch crossing  & Used to track beam width, $\sigma_{BBC}$  for specific bunches\\
+\bottomrule
+\end{tabular}
+\caption{ Data extracted from PRDFs. }
+\label{tab:prdf_data_summary}
+\end{sidewaystable}
 
 \subsection{Scaler Events}
 Scaler events are a special type of event which tracks the total number of times
@@ -264,7 +308,21 @@ to calculate the efficiency of various flavors of minimum bias triggers in this
 analysis, and this requires that we look at other runs, which contain hundreds
 of segments. 
 
-\input{./tables/dstnodes.tex}
+\begin{table}
+  \centering
+  \begin{tabular}{ l p{6cm} }
+    \toprule
+    \textbf{Node} & \textbf{Description} \\
+    \midrule 
+    BbcOut           & Number of north/south photomultiplier tubes fired, and BBC event z-vertex \\
+    ZdcOut           & Zdc event z-vertex  \\
+    TrigLvl1         & Bitmask for live-events, raw-events and scaled-events. \\
+    SpinDataEventOut & Event-sequence, gl1crossing ID (bunch number), four gl1-1p scalers \\
+    \bottomrule
+  \end{tabular}
+  \caption{ A brief summary of data-nodes which are used in the vernier analysis, via DST }
+  \label{tab:dstnodes}
+\end{table}
 
 \section{Wall Current Monitor and Direct-Current Current-Transformer}
 The wall current monitor and direct-current current-transformers (WCM and DCCT,
@@ -279,8 +337,31 @@ packet in PRDFs, however, the framework for doing this has not been developed,
 as the data streams were parsed from log files and data bases at the time of the
 various vernier scans.
 
-\input{./figures/wcm_schematic_cartoon.tex}
-\input{./figures/dcct_schematic_cartoon.tex}
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[width=0.75\linewidth]{./figures/wcm_schematic_cartoon}
+    \caption{ 
+      Here we see an insulating ceramic break in the beam pipe, which shunts
+      image wall currents from the beam pipe around the toriud. Magnetic
+      shielding excludes external magnetic fields.~\cite{kawallfocus2005} 
+    }
+    \label{fig:wcm_schematic_cartoon}
+  \end{center}
+\end{figure}
+
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[width=0.75\linewidth]{./figures/dcct_schematic_cartoon}
+    \caption{
+      The wall current monitor uses an insulating ceramic break in the beam pipe
+      similarly to the DCCT, which forces image wall currents through
+      electronics which measure the current frequencies. The WCM is sensitive
+      only to bunched beams, and can measure longitudianl profiles of bunches
+      ~\cite{kawallfocus2005}.
+    }
+    \label{fig:dcct_schematic_cartoon}
+  \end{center}
+\end{figure}
 
 \section{Software Repositories}
 I've developed a suite of software tools which deal with various data streams

@@ -34,24 +34,36 @@ described by the convelution of each bunch density over all four space-time
 coordinates:
 
 \begin{equation}
-\label{eq:generalluminosity}
-\mathcal{L} = {2 f_{bunch} n_{bunch} N_{blue} N_{yellow} \int \int \int
-	\int_{-\infty}^{\infty }\rho^{blue}(x,y,z+ct)\rho^{yellow}(x,y,z-ct)2c\
-	dt\ dz\ dx\ dy } 
+  \label{eq:generalluminosity}
+  \mathcal{L} = {2 f_{bunch} n_{bunch} N_{blue} N_{yellow} \int \int \int
+    \int_{-\infty}^{\infty }\rho^{blue}(x,y,z+ct)\rho^{yellow}(x,y,z-ct)2c\
+  dt\ dz\ dx\ dy } 
 \end{equation}
 
 \section{Realistically Modeling the Beam}
 In simulation, we need to use densities which realistically model the beam's
-real shape, ~\cite{herr2006lumi}. We can naievely model the beams in the transverse direction as
-simple normal gaussian distriubtions (Eq~\ref{eq:norm_dist}), assuming head-on
-collisions (Figure~\ref{fig:simple_bunch_head_on}).:
+real shape, ~\cite{herr2006lumi}. We can naievely model the beams in the
+transverse direction as simple normal gaussian distriubtions
+(Eq~\ref{eq:norm_dist}), assuming head-on collisions
+(Figure~\ref{fig:simple_bunch_head_on}).:
 
 \begin{equation}
-\label{eq:norm_dist}
-\rho(x_{i}) = \frac{e^{ -\frac{(x_{i}-\mu)^2}{2\sigma_{x_i}^2}}}{\sigma_{x_i}\sqrt{2\pi}}
+  \label{eq:norm_dist}
+  \rho(x_{i}) = \frac{e^{ -\frac{(x_{i}-\mu)^2}{2\sigma_{x_i}^2}}}{\sigma_{x_i}\sqrt{2\pi}}
 \end{equation}
 
-\input{./figures/simple_bunch_head_on.tex}
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{./figures/simple_bunch_head_on}
+    \caption{ 
+      Here we see two bunches colliding head on, which is a simplified model
+      used to estimate the expected luminsoity, before the application of the
+      $\beta^{*}$ squeezing effect and any existence of crossing angles,
+      $\theta_{XZ}$ or $\theta_{YZ}$ 
+    }
+    \label{fig:simple_bunch_head_on}
+  \end{center}
+\end{figure}
 
 However, equation~\ref{eq:norm_dist} does not capture the true geometry of the
 beams. We know that there is a $\beta$ squeeze near the PHENIX IR which squeezes
@@ -69,8 +81,8 @@ and then add in corrections to give us a good estimation of beam geometry.
 Firstly, we assume that the densities are seperable, i.e.: 
 
 \begin{equation}
-\label{eq:sep_density}
-\rho(x,y,z\pm ct) \rightarrow \rho_{x}(x)\rho_{y}(y)\rho_{z}(z\pm ct)
+  \label{eq:sep_density}
+  \rho(x,y,z\pm ct) \rightarrow \rho_{x}(x)\rho_{y}(y)\rho_{z}(z\pm ct)
 \end{equation}
 
 We know that the time-dependence of the luminosity is merely to reflect that the
@@ -100,35 +112,35 @@ additionally introduce x and y dependence into the z-profile. The rotation is
 accomplished with a simple coordinate transform.
 
 \begin{equation}
-\label{eq:realistic_transverse_density}
-C_{norm}{e}^{\frac{-{\left(x-\mu_{x}\right)}^2}{2{\left(\sigma\right)}^2}}
+  \label{eq:realistic_transverse_density}
+  C_{norm}{e}^{\frac{-{\left(x-\mu_{x}\right)}^2}{2{\left(\sigma\right)}^2}}
 \end{equation}
 
 Transformation of the beam widths due to $\beta_{*}$ squeezing (see
 Figure~\ref{fig:beta_function}
 
 \begin{gather}
-\label{eq:beta_star_transform}
-\sigma_{i} \rightarrow {{\sigma}_{i}}^{*} =
-\sigma_{i}\sqrt{1+{\left(\frac{z}{\beta^{*}} \right)}^{2} } \\
-i = x, y
+  \label{eq:beta_star_transform}
+  \sigma_{i} \rightarrow {{\sigma}_{i}}^{*} =
+  \sigma_{i}\sqrt{1+{\left(\frac{z}{\beta^{*}} \right)}^{2} } \\
+  i = x, y
 \end{gather}
 
 
 Now apply the rotation, see Figure~\ref{fig:xz_angle}:
 
 \begin{gather}
-\label{eq:transformations}
-x_{blue}   \rightarrow x cos \frac{\phi}{2} - z sin \frac{\phi}{2} \\
-z_{blue}   \rightarrow z cos \frac{\phi}{2} + x sin \frac{\phi}{2} \\
-x_{yellow} \rightarrow x cos \frac{\phi}{2} + z sin \frac{\phi}{2} \\
-z_{yellow} \rightarrow z cos \frac{\phi}{2} - z sin \frac{\phi}{2} \\
-sin \frac {\phi}{2} \rightarrow \frac{\phi}{2} \\
-cos \frac {\phi}{2} \rightarrow 1 + \frac{\phi^2}{4} \\
-x_{blue}^{R}  = x\left(1+\frac{{\phi}^{2}}{4}\right)- z \frac{\phi}{2} \\
-z_{blue}^{R}  = z\left(1+\frac{{\phi}^{2}}{4}\right)+ x \frac{\phi}{2} \\
-x_{yellow}^{R}= x\left(1+\frac{{\phi}^{2}}{4}\right)+ z \frac{\phi}{2} \\
-z_{yellow}^{R}= z\left(1+\frac{{\phi}^{2}}{4}\right)- z \frac{\phi}{2} \\
+  \label{eq:transformations}
+  x_{blue}   \rightarrow x cos \frac{\phi}{2} - z sin \frac{\phi}{2} \\
+  z_{blue}   \rightarrow z cos \frac{\phi}{2} + x sin \frac{\phi}{2} \\
+  x_{yellow} \rightarrow x cos \frac{\phi}{2} + z sin \frac{\phi}{2} \\
+  z_{yellow} \rightarrow z cos \frac{\phi}{2} - z sin \frac{\phi}{2} \\
+  sin \frac {\phi}{2} \rightarrow \frac{\phi}{2} \\
+  cos \frac {\phi}{2} \rightarrow 1 + \frac{\phi^2}{4} \\
+  x_{blue}^{R}  = x\left(1+\frac{{\phi}^{2}}{4}\right)- z \frac{\phi}{2} \\
+  z_{blue}^{R}  = z\left(1+\frac{{\phi}^{2}}{4}\right)+ x \frac{\phi}{2} \\
+  x_{yellow}^{R}= x\left(1+\frac{{\phi}^{2}}{4}\right)+ z \frac{\phi}{2} \\
+  z_{yellow}^{R}= z\left(1+\frac{{\phi}^{2}}{4}\right)- z \frac{\phi}{2} \\
 \end{gather}
 
 Rather then write down the final (frankly hideous) form of the luminsoity
@@ -136,11 +148,11 @@ integral, I will instead write it down in terms of these transformed
 coordinates.
 
 \begin{gather}
-\label{eq:final_luminosity}
-{{\sigma}_{i}}^{*} \rightarrow \sigma_{i}^{*R} =
-\sigma_{i}\sqrt{1+{\left(\frac{z^{R}}{\beta^{*}} \right)}^{2} } \\
-\rho_{x_i}(x_{i}) \rightarrow \rho_{x_{i}^{R}}^{*}(x_{i}^{R}) = C_{x_{i}}{e}^{\frac{-{\left(x_{i}^{R}-\mu_{x}\right)}^2}{2{\left(\sigma_{i}^{*R}\right)}^2}} \\
-i = x,y \\
+  \label{eq:final_luminosity}
+  {{\sigma}_{i}}^{*} \rightarrow \sigma_{i}^{*R} =
+  \sigma_{i}\sqrt{1+{\left(\frac{z^{R}}{\beta^{*}} \right)}^{2} } \\
+  \rho_{x_i}(x_{i}) \rightarrow \rho_{x_{i}^{R}}^{*}(x_{i}^{R}) = C_{x_{i}}{e}^{\frac{-{\left(x_{i}^{R}-\mu_{x}\right)}^2}{2{\left(\sigma_{i}^{*R}\right)}^2}} \\
+  i = x,y \\
 \end{gather}
 
 We plug the separable models for density into the luminosity integral to obtain
@@ -150,11 +162,42 @@ it may be neccessary to numerically integrate the density functions, and apply
 an overall normalization.
 
 \clearpage
-\input{./figures/xz_angle.tex}
-\input{./figures/beta_function.tex}
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=\linewidth,height=0.5\textheight,keepaspectratio]{./figures/xing_bunch}
+  \includegraphics[width=\linewidth,height=0.5\textheight,keepaspectratio]{./figures/bunch_rotation}
+  \caption{ 
+    Here, we see a schematic view of the coordinate rotation due to the crossing
+    angle (in this case we see the XZ plane, but the situation is identical in the
+    YZ plane).
+  }
+  \label{fig:xz_angle}
+\end{figure}
+
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{./figures/beta_function}
+  \caption{
+    Here, we see a function of z, $\beta^{*}$, which shows the shape of the
+    squeezing potential in one of the planes. Two different values of
+    $\beta^{*}$ are shown.
+  }
+  \label{fig:beta_function}
+\end{figure}
 \clearpage
 
-\input{./figures/sample_configuration.tex}
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{./figures/sample_configuration}
+  \caption{
+    Each parameter is initialized directly from data. Parameters which are our
+    goal to determine, $\beta^{*}$ and $\theta_{xing}$ are obtained from
+    reasonable ranges predicted by CAD, and then varied until good agreement is
+    reached.
+  }
+  \label{fig:sample_configuration}
+\end{figure}
 
 \section{Monte Carlo Simulation and Numerically Integrated Luminosity}
 The toy Monte Carlo is seeded with initial values which are extracted from the
@@ -168,10 +211,10 @@ making a few simplifying assumptions.
   \item All bunches are identical
   \item Beam widths obtained from the vernier scan are good approximations
   \item Which bunches are filled/unfilled do not matter, so long as we have the
-	correct number of filled bunches.
+    correct number of filled bunches.
   \item There is no crossing angle in the z-y plane, only the z-x plane (this
-	  can be verified as a good assumption by observing figure (FIGURE
-	  REFERENCE NEEDED)
+    can be verified as a good assumption by observing figure (FIGURE
+    REFERENCE NEEDED)
 \end{itemize}
 
 Once we simulate the luminosity, we compare this to the overall luminosity
@@ -185,15 +228,128 @@ space and time finely enough to converge to a reasonable value.
 The general work flow of the simulation and minimization process is modeled
 schematically in ~\ref{fig:simulation_flow}. 
 
-\input{./figures/simulation_flow.tex}
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{./figures/simulation_flow}
+\caption{
+Here we see the schematic overview of the simulation. Each box represents a
+distinct step we take in the modeling or numeric integration of the luminosity.
+Because we use numeric methods for solving the luminosity integral, we do not
+have easy access to regression methods such as gradient-descent. Instead we
+start matching the zdc z-vertex profile with the simulated profile, and then
+vary the configuration parameters over reasonable ranges, choosing the result
+which minimizes the difference between the distributions.
+}
+\label{fig:simulation_flow}
+\end{center}
+\end{figure}
 \clearpage
-\input{./figures/359711_wcm_zprofile.tex}
-\input{./figures/360879_wcm_zprofile.tex}
-\input{./figures/362492_wcm_zprofile.tex}
-\input{./figures/364636_wcm_zprofile.tex}
-\input{./figures/365866_wcm_zprofile.tex}
-\input{./figures/366605_wcm_zprofile.tex}
-\input{./figures/367138_wcm_zprofile.tex}
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{./figures/359711_wcm_zprofile}
+\caption{ 
+Left: the blue and yellow wall current monitor beam z-profiles. One can see the
+three beam buckets which make up one so-called "filled bunch". Bunches are
+approximately 1000 cm long, the entire profile passes the IR once every 106
+nanoseconds, though most of the bunch is actually within a time envelope of
+approximately 35 nanosecons. The panes on the right show the blue beam (top)
+and the yellow beam (bottom).
+}
+\label{fig:359711_wcm_zprofile}
+\end{center}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{./figures/360879_wcm_zprofile}
+\caption{ 
+Left: the blue and yellow wall current monitor beam z-profiles. One can see the
+three beam buckets which make up one so-called "filled bunch". Bunches are
+approximately 1000 cm long, the entire profile passes the IR once every 106
+nanoseconds, though most of the bunch is actually within a time envelope of
+approximately 35 nanosecons. The panes on the right show the blue beam (top)
+and the yellow beam (bottom).
+}
+\label{fig:360879_wcm_zprofile}
+\end{center}
+\end{figure}
+
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{./figures/362492_wcm_zprofile}
+\caption{ 
+Left: the blue and yellow wall current monitor beam z-profiles. One can see the
+three beam buckets which make up one so-called "filled bunch". Bunches are
+approximately 1000 cm long, the entire profile passes the IR once every 106
+nanoseconds, though most of the bunch is actually within a time envelope of
+approximately 35 nanosecons. The panes on the right show the blue beam (top)
+and the yellow beam (bottom).
+}
+\label{fig:362492_wcm_zprofile}
+\end{center}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{./figures/364636_wcm_zprofile}
+\caption{ 
+Left: the blue and yellow wall current monitor beam z-profiles. One can see the
+three beam buckets which make up one so-called "filled bunch". Bunches are
+approximately 1000 cm long, the entire profile passes the IR once every 106
+nanoseconds, though most of the bunch is actually within a time envelope of
+approximately 35 nanosecons. The panes on the right show the blue beam (top)
+and the yellow beam (bottom).
+}
+\label{fig:364636_wcm_zprofile}
+\end{center}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{./figures/365866_wcm_zprofile}
+\caption{ 
+Left: the blue and yellow wall current monitor beam z-profiles. One can see the
+three beam buckets which make up one so-called "filled bunch". Bunches are
+approximately 1000 cm long, the entire profile passes the IR once every 106
+nanoseconds, though most of the bunch is actually within a time envelope of
+approximately 35 nanosecons. The panes on the right show the blue beam (top)
+and the yellow beam (bottom).
+}
+\label{fig:365866_wcm_zprofile}
+\end{center}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{./figures/366605_wcm_zprofile}
+\caption{ 
+Left: the blue and yellow wall current monitor beam z-profiles. One can see the
+three beam buckets which make up one so-called "filled bunch". Bunches are
+approximately 1000 cm long, the entire profile passes the IR once every 106
+nanoseconds, though most of the bunch is actually within a time envelope of
+approximately 35 nanosecons. The panes on the right show the blue beam (top)
+and the yellow beam (bottom).
+}
+\label{fig:366605_wcm_zprofile}
+\end{center}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{./figures/367138_wcm_zprofile}
+\caption{ 
+Left: the blue and yellow wall current monitor beam z-profiles. One can see the
+three beam buckets which make up one so-called "filled bunch". Bunches are
+approximately 1000 cm long, the entire profile passes the IR once every 106
+nanoseconds, though most of the bunch is actually within a time envelope of
+approximately 35 nanosecons. The panes on the right show the blue beam (top)
+and the yellow beam (bottom).
+}
+\label{fig:367138_wcm_zprofile}
+\end{center}
+\end{figure}
 \clearpage
 
 \subsection{Hourglass Simulation Parameter Space}
@@ -203,16 +359,24 @@ best set of intial parameters to use to configure the starting point for the
 brute force regression. An example is seen in
 Figure~\ref{359711_step14_config_compare}. 
 
-\input{./figures/359711_step0_config_compare.tex}
+\begin{figure}
+\begin{center}
+\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{./figures/359711_step14_config_compare}
+\caption{ 
+\textcolor{red}{Default Caption}
+}
+\label{fig:359711_step14_config_compare}
+\end{center}
+\end{figure}
 \clearpage
 
 By running the simulation with extreme variations in the parameters,
 systematically, I identified how each parameter tends to affect the z-vertex
 profile. The following parameters map to the following z-profile behavior:
 \begin{itemize}
-\item $\theta_{XZ} \rightarrow$ Asymmetry in peak heights
-\item Beam Displacement / $\sigma{x,y} \rightarrow$ Peak Separation
-\item ZDC yield (not shown) $\rightarrow$ Peak Scaling
+  \item $\theta_{XZ} \rightarrow$ Asymmetry in peak heights
+  \item Beam Displacement / $\sigma{x,y} \rightarrow$ Peak Separation
+  \item ZDC yield (not shown) $\rightarrow$ Peak Scaling
 \end{itemize}
 
 Also note that scaling the beam widths OR changing the displacement will change
